@@ -1,0 +1,110 @@
+@import '../../../../src/styles';
+
+.whole-music-genres {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  height: 100vh;
+
+  .genres-img {
+    position: absolute;
+    z-index: -50;
+    object-fit: cover;
+    object-position: center;
+    top: 30px;
+    opacity: .8;
+  }
+}
+
+
+.grid-header {
+  text-align: center;
+  margin: 55px 0 30px 0;
+  font-size: 70px;
+  letter-spacing: 2px;
+  font-family: Dosis-semiBold, sans-serif;
+  font-weight: 600;
+  color: $sunSet;
+  cursor: default;
+}
+
+.grids {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.grid-system {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  justify-content: space-around;
+}
+
+.grid-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: transparent;
+  backdrop-filter: blur(4px) saturate(100%) contrast(50%) brightness(150%);
+  box-shadow: inset 0 0 0 200px rgb(255 255 255 / 5%);
+  margin: 20px;
+  width: 200px;
+  height: 90px;
+  border-radius: 5px;
+  transition-duration: .4s;
+
+  &:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    box-shadow: 0 1px 8px #f5f7fa,
+    0 -1px 8px #c3cfe2;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+
+    .text-span {
+      color: $sunSet;
+      cursor: pointer;
+      text-shadow: none;
+      font-weight: 600;
+    }
+    .boxes-texes {
+      text-overflow: clip;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.boxes-icon {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+  opacity: 0;
+}
+
+.boxes-texes {
+  padding: 0 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-span {
+  color: $slowBlack;
+  font-size: 21px;
+  letter-spacing: 2px;
+  font-family: Dosis-Medium, sans-serif;
+  text-shadow: 0 1px 2px black;
+  opacity: .8;
+}
+
+@media only screen and (max-width: 880px) {
+  .grid-boxes {
+    width: 175px;
+  }
+  .genres-img {
+    object-position: bottom;
+    top: 0;
+  }
+}

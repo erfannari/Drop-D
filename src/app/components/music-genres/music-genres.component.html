@@ -1,0 +1,24 @@
+<div class="whole-music-genres">
+  <img class="genres-img" loading="lazy" src="../../assets/isometrics/open-air-festival-blog-BG.svg" alt="">
+  <div class="genres-content">
+    <div class="grid-header">
+      <span>Choose your taste</span>
+    </div>
+    <div class="grid-system">
+      <div class="grids">
+        <div
+          class="grid-boxes"
+          *ngFor="let genre of Genres"
+          id="grid-boxes">
+          <!--          <div class="boxes-icon">-->
+          <!--            <img [src]="genre.icon" alt="hand">-->
+          <!--          </div>-->
+          <div class="boxes-texes" dir="ltr">
+            <span class="text-span">{{genre.name | Shorten:4}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,57 @@
+@import '../../../../src/styles';
+
+.navbar {
+  background-color: #212121;
+}
+
+.navbar-brand {
+  cursor: default;
+  text-shadow: 1px 2px 5px black;
+  align-items: center;
+  transition-duration: .3s;
+
+  &:hover {
+    color: $sunSet;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.nav-item {
+  padding: 10px 20px;
+  font-family: iranSans, sans-serif;
+  margin: 0 !important;
+}
+
+.nav-item a {
+  padding: 0;
+  text-decoration: none;
+  text-shadow: 1px 2px 5px black;
+  transition-duration: .3s;
+
+  &:hover {
+    color: $sunSet;
+    transform: scale(1.1);
+  }
+}
+
+.dropdown-item {
+  text-shadow: none;
+
+  &:hover {
+    background-color: $sunSet;
+    color: $WhiteFridge;
+    transition-duration: .5s;
+  }
+}
+
+
+.form-control {
+  font-family: iranSans, sans-serif;
+}
+
+.btn {
+  font-family: iranSans, sans-serif;
+}
+
+

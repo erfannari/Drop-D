@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="whole-discography">
+      <div class="discography-sections" *ngFor="let disco of discography">
+        <div class="disco-img">
+          <img [src]="disco.image" alt="">
+        </div>
+        <div class="disco-content">
+          <span class="disco-band-name">{{disco.bandName}}</span>
+          <span class="disco-text">{{disco.bandDescription}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

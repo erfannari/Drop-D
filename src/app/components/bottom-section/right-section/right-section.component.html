@@ -1,0 +1,22 @@
+<div class="player-section mr-3">
+  <div class="grid-header">
+    <span>Artist of the Week</span>
+  </div>
+  <div class="grid-system">
+    <div class="grids" *ngFor="let visited of mostVisited">
+      <div class="artist-player" style="width: 60%">
+        <div class="music-player">
+          <audio controls src="src/assets/musics/All-I-Want.mp3"></audio>
+        </div>
+      </div>
+      <div class="image-box">
+        <div class="images">
+          <img [src]="visited.image" alt="hand">
+        </div>
+        <div class="texes-boxes" dir="ltr">
+          <span class="text-span">{{visited.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

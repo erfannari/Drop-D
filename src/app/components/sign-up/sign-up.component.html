@@ -1,0 +1,177 @@
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center align-items-center mt-5">
+    <div class="background-sign-up container" id="background-sign-up">
+      <div class="sign-up-isometric">
+        <img src="../../../assets/isometrics/signUP.svg" alt="sign-up-isometric">
+      </div>
+      <div class="sign-up">
+        <div class="top-area-text">
+        <span class="sign-up-text">
+           Sign Up
+       </span>
+        </div>
+        <form #postForm="ngForm" (ngSubmit)="onSendPost(postForm.value)">
+          <div class="email-section form-group mt-1">
+            <label for="email" class="labels">
+              <span class="label-text">
+                Email Address
+              </span>
+              <input
+                type="email"
+                class="inputs"
+                placeholder="Name@exsample.com"
+                id="email"
+                name="email"
+                required
+                ngModel
+              />
+            </label>
+          </div>
+          <div class="password-section form-group mt-4 mb-2">
+            <label for="password" class="labels">
+              <span class="label-text">
+                Password
+              </span>
+              <input
+                type="password"
+                class="inputs"
+                placeholder="Enter your Password"
+                id="password"
+                name="password"
+                required
+                ngModel
+              />
+            </label>
+          </div>
+          <div class="show-password mt-3">
+            <label class="box">
+              <p>
+                Show Password
+              </p>
+              <input type="checkbox" (click)="togglePassword()"/>
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="submit-area">
+            <button
+              class="submit-button"
+              id="signUp-btn"
+              type="submit">
+              Sign Up
+            </button>
+            <button
+              class="submit-button"
+              id="google-sign-up-btn"
+              type="button"
+              (click)="onFetchPosts()">
+              Fetch
+            </button>
+            <button
+              class="submit-button"
+              id="google-sign-up-btn"
+              type="button"
+              (click)="onClearPosts()">
+              Delete
+            </button>
+          </div>
+        </form>
+        <div class="login-content mb-3" id="Login-In">
+          <p>Already Have An Account <br> <a (click)="OnChangeSignUpLogin()">Login In</a></p>
+        </div>
+        <div class="output-http login-content">
+          <div class="mt-1 mb-1" *ngIf="loadedPosts.length >= 1">
+            <div *ngFor="let posts of loadedPosts">
+              <h1><strong>Email: </strong>{{ posts.email }}</h1>
+              <p><strong>Password: </strong>{{posts.password}}</p>
+            </div>
+          </div>
+          <div class="error mb-0 mt-0" *ngIf="error">
+            <p> <strong>!Error: {{ error }}</strong></p>
+            <button class="btn btn-danger" (click)="handleError()">ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background-login container" id="background-login">
+      <div class="sign-up">
+        <div class="top-area-text">
+        <span class="sign-up-text">
+           Login
+       </span>
+        </div>
+        <form>
+          <div class="email-section form-group mt-1">
+            <label for="email" class="labels">
+              <span class="label-text">
+                Email Address
+              </span>
+              <input
+                type="email"
+                class="inputs"
+                placeholder="Name@exsample.com"
+                id="email-login"
+                name="email"
+                required
+                ngModel
+              />
+            </label>
+          </div>
+          <div class="password-section form-group mt-4 mb-2">
+            <label for="password" class="labels">
+              <span class="label-text">
+                Password
+              </span>
+              <input
+                type="password"
+                class="inputs"
+                placeholder="Enter your Password"
+                id="password"
+                name="password"
+                required
+                ngModel
+              />
+            </label>
+          </div>
+          <div class="remember-me">
+            <label class="box">
+              <p>
+                Remember Me
+              </p>
+              <input type="checkbox"/>
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="show-password mt-2">
+            <label class="box">
+              <p>
+                Show Password
+              </p>
+              <input type="checkbox" (click)="togglePassword()"/>
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="submit-area">
+            <button
+              class="submit-button"
+              id="Login"
+              type="submit">
+              Sign Up
+            </button>
+            <button
+              class="submit-button"
+              id="google-login"
+              type="submit">
+              Google
+            </button>
+          </div>
+        </form>
+        <div class="login-content mb-3" id="Sign-Up">
+          <p>?New Member<br><a (click)="OnChangeSignUpLogin()">Create Account</a></p>
+        </div>
+      </div>
+      <div class="sign-up-isometric">
+        <img src="../../../assets/isometrics/blog-login.svg" alt="sign-up-isometric">
+      </div>
+    </div>
+  </div>
+</div>

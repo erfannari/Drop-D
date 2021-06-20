@@ -1,0 +1,277 @@
+@import '../../../../src/styles';
+
+.background-sign-up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  opacity: 10;
+}
+
+//***********LOGIN
+.background-login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+
+//***********LOGIN
+
+.sign-up-isometric {
+  width: 55%;
+  padding-left: 50px;
+}
+
+.sign-up {
+  background-color: $WhiteFridge;
+  height: 100%;
+  width: 30%;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 10px 15px black,
+  -10px -10px 15px black;
+}
+
+.top-area-text {
+  //margin-top: 25px;
+}
+
+.sign-up-text {
+  color: $sunSet;
+  font-size: 45px;
+  font-family: Dosis-semiBold, sans-serif;
+}
+
+.label-text {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: Dosis-Medium, sans-serif;
+  transition-duration: .3s;
+}
+
+.labels {
+  width: 100%;
+}
+
+.inputs {
+  width: 80%;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid $slowBlack;
+  outline: none;
+  opacity: .8;
+  font-family: Dosis-Medium, sans-serif;
+  letter-spacing: 1px;
+
+  &:focus {
+    border-bottom: 1px solid $sunSet;
+  }
+
+}
+
+.remember-me,
+.show-password {
+  padding: 0 35px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+//*******CheckBox
+
+.checkbox {
+  margin: 1rem 2.5rem;
+  display: flex;
+}
+
+.box {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  span {
+    font-size: 0.75em;
+    opacity: 0.7;
+  }
+
+  p {
+    font-family: Dosis-Medium, sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    opacity: .9;
+  }
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 2px solid #ced4da;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.box input:checked ~ .check {
+  background-color: white;
+  transform: rotate(360deg);
+  transition: all .4s;
+  border: 2px solid $sunSet;
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.box input:checked ~ .check:after {
+  display: block;
+}
+
+.box .check:after {
+  left: 4.5px;
+  bottom: 2px;
+  width: 5px;
+  height: 13px;
+  border: solid $sunSet;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.submit-area {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-evenly;
+
+  #google-sign-up-btn, #google-login {
+    background-color: $sunSet;
+    transition-duration: .2s;
+    box-shadow: 0 0 5px $GoogleRedDark;
+    margin-right: 5px;
+
+
+    &:hover {
+      background-color: $GoogleRedDark;
+    }
+  }
+
+  #signUp-btn, #Login {
+    background-color: $DeepOcean;
+    transition-duration: .2s;
+    box-shadow: 0 0 5px $DeepOceanDark;
+    margin-left: 5px;
+
+    &:hover {
+      background-color: $DeepOceanDark;
+    }
+  }
+}
+
+.submit-button {
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Dosis-Medium, sans-serif;
+  letter-spacing: 1px;
+  color: $WhiteFridge;
+}
+
+.login-content {
+  p {
+    color: $slowBlack;
+    opacity: .8;
+    font-size: 15px;
+    font-family: Dosis-Medium, sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+
+    a {
+      color: $slowBlack;
+      opacity: .8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 17px;
+      transition-duration: .3s;
+
+      &:hover {
+        color: $sunSet;
+        transform: scale(2);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.output-http {
+  background-color: gray;
+  padding: 5px 0;
+
+  h1 {
+    color: $slowBlack;
+    opacity: .8;
+    font-size: 20px;
+    font-family: Dosis-Medium, sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  p {
+    color: $slowBlack;
+    opacity: .8;
+    font-size: 15px;
+    font-family: Dosis-Medium, sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+}
+
+//***********SIGN UP END
+
+// ************** MEDIA **************
+
+@media only screen and (max-width: 992px) {
+  .background {
+    justify-content: center;
+  }
+  .sign-up-isometric {
+    position: absolute;
+    z-index: -10;
+  }
+  .sign-up {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .background {
+    justify-content: center;
+  }
+  .sign-up-isometric {
+    display: none;
+  }
+  .sign-up {
+    width: 70%;
+  }
+}
+
+

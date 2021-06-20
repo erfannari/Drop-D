@@ -1,0 +1,140 @@
+@font-face {
+  font-family: PlayfairDisplayM;
+  src: url("./assets/Fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: PlayFairDisplayB;
+  src: url("./assets/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("./assets/Fonts/Montserrat/Montserrat-light.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/Fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: iranSans;
+  src: url("./assets/Fonts/iranSans/iranSans/ttf/IRANSansWeb_Light.ttf");
+}
+@font-face {
+  font-family: BongCyperPonk;
+  src: url("./assets/Fonts/boge-font/Boge-MV3lY.otf");
+}
+@font-face {
+  font-family: bebas;
+  src: url("./assets/Fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("./assets/Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: openSans;
+  src: url("./assets/Fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: Dosis-semiBold;
+  src: url("./assets/Fonts/Dosis/static/Dosis-SemiBold.ttf");
+}
+@font-face {
+  font-family: Dosis-Medium;
+  src: url("./assets/Fonts/Dosis/static/Dosis-Medium.ttf");
+}
+body {
+  background: linear-gradient(to left, black, #212121);
+  scroll-behavior: smooth;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff1e00;
+  border-radius: 30px;
+}
+
+p {
+  cursor: default;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, span {
+  user-select: none;
+}
+
+.LoginAddClass {
+  opacity: 1;
+  z-index: 10;
+  transition-duration: 0.3s;
+}
+
+.LoginRemoveClass {
+  opacity: 0;
+  z-index: -10;
+  transition-duration: 0.3s;
+}
+
+.navbar {
+  background-color: #212121;
+}
+
+.navbar-brand {
+  cursor: default;
+  text-shadow: 1px 2px 5px black;
+  align-items: center;
+  transition-duration: 0.3s;
+}
+.navbar-brand:hover {
+  color: #ff1e00;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.nav-item {
+  padding: 10px 20px;
+  font-family: iranSans, sans-serif;
+  margin: 0 !important;
+}
+
+.nav-item a {
+  padding: 0;
+  text-decoration: none;
+  text-shadow: 1px 2px 5px black;
+  transition-duration: 0.3s;
+}
+.nav-item a:hover {
+  color: #ff1e00;
+  transform: scale(1.1);
+}
+
+.dropdown-item {
+  text-shadow: none;
+}
+.dropdown-item:hover {
+  background-color: #ff1e00;
+  color: #ffff;
+  transition-duration: 0.5s;
+}
+
+.form-control {
+  font-family: iranSans, sans-serif;
+}
+
+.btn {
+  font-family: iranSans, sans-serif;
+}
+
+/*# sourceMappingURL=header.component.css.map */

@@ -1,0 +1,338 @@
+@font-face {
+  font-family: PlayfairDisplayM;
+  src: url("./assets/Fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: PlayFairDisplayB;
+  src: url("./assets/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("./assets/Fonts/Montserrat/Montserrat-light.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/Fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: iranSans;
+  src: url("./assets/Fonts/iranSans/iranSans/ttf/IRANSansWeb_Light.ttf");
+}
+@font-face {
+  font-family: BongCyperPonk;
+  src: url("./assets/Fonts/boge-font/Boge-MV3lY.otf");
+}
+@font-face {
+  font-family: bebas;
+  src: url("./assets/Fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("./assets/Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: openSans;
+  src: url("./assets/Fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: Dosis-semiBold;
+  src: url("./assets/Fonts/Dosis/static/Dosis-SemiBold.ttf");
+}
+@font-face {
+  font-family: Dosis-Medium;
+  src: url("./assets/Fonts/Dosis/static/Dosis-Medium.ttf");
+}
+body {
+  background: linear-gradient(to left, black, #212121);
+  scroll-behavior: smooth;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff1e00;
+  border-radius: 30px;
+}
+
+p {
+  cursor: default;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, span {
+  user-select: none;
+}
+
+.LoginAddClass {
+  opacity: 1;
+  z-index: 10;
+  transition-duration: 0.3s;
+}
+
+.LoginRemoveClass {
+  opacity: 0;
+  z-index: -10;
+  transition-duration: 0.3s;
+}
+
+.background-sign-up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  opacity: 10;
+}
+
+.background-login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+
+.sign-up-isometric {
+  width: 55%;
+  padding-left: 50px;
+}
+
+.sign-up {
+  background-color: #ffff;
+  height: 100%;
+  width: 30%;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 10px 15px black, -10px -10px 15px black;
+}
+
+.sign-up-text {
+  color: #ff1e00;
+  font-size: 45px;
+  font-family: Dosis-semiBold, sans-serif;
+}
+
+.label-text {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: Dosis-Medium, sans-serif;
+  transition-duration: 0.3s;
+}
+
+.labels {
+  width: 100%;
+}
+
+.inputs {
+  width: 80%;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid #212121;
+  outline: none;
+  opacity: 0.8;
+  font-family: Dosis-Medium, sans-serif;
+  letter-spacing: 1px;
+}
+.inputs:focus {
+  border-bottom: 1px solid #ff1e00;
+}
+
+.remember-me,
+.show-password {
+  padding: 0 35px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkbox {
+  margin: 1rem 2.5rem;
+  display: flex;
+}
+
+.box {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.box span {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+.box p {
+  font-family: Dosis-Medium, sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  opacity: 0.9;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 2px solid #ced4da;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.box input:checked ~ .check {
+  background-color: white;
+  transform: rotate(360deg);
+  transition: all 0.4s;
+  border: 2px solid #ff1e00;
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.box input:checked ~ .check:after {
+  display: block;
+}
+
+.box .check:after {
+  left: 4.5px;
+  bottom: 2px;
+  width: 5px;
+  height: 13px;
+  border: solid #ff1e00;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.submit-area {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.submit-area #google-sign-up-btn, .submit-area #google-login {
+  background-color: #ff1e00;
+  transition-duration: 0.2s;
+  box-shadow: 0 0 5px #c5161c;
+  margin-right: 5px;
+}
+.submit-area #google-sign-up-btn:hover, .submit-area #google-login:hover {
+  background-color: #c5161c;
+}
+.submit-area #signUp-btn, .submit-area #Login {
+  background-color: #1f7cc9;
+  transition-duration: 0.2s;
+  box-shadow: 0 0 5px #2792e9;
+  margin-left: 5px;
+}
+.submit-area #signUp-btn:hover, .submit-area #Login:hover {
+  background-color: #2792e9;
+}
+
+.submit-button {
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Dosis-Medium, sans-serif;
+  letter-spacing: 1px;
+  color: #ffff;
+}
+
+.login-content p {
+  color: #212121;
+  opacity: 0.8;
+  font-size: 15px;
+  font-family: Dosis-Medium, sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.login-content p a {
+  color: #212121;
+  opacity: 0.8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition-duration: 0.3s;
+}
+.login-content p a:hover {
+  color: #ff1e00;
+  transform: scale(2);
+  cursor: pointer;
+}
+
+.output-http {
+  background-color: gray;
+  padding: 5px 0;
+}
+.output-http h1 {
+  color: #212121;
+  opacity: 0.8;
+  font-size: 20px;
+  font-family: Dosis-Medium, sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.output-http p {
+  color: #212121;
+  opacity: 0.8;
+  font-size: 15px;
+  font-family: Dosis-Medium, sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .background {
+    justify-content: center;
+  }
+
+  .sign-up-isometric {
+    position: absolute;
+    z-index: -10;
+  }
+
+  .sign-up {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 765px) {
+  .background {
+    justify-content: center;
+  }
+
+  .sign-up-isometric {
+    display: none;
+  }
+
+  .sign-up {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=sign-up.component.css.map */

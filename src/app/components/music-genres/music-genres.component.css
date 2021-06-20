@@ -1,0 +1,195 @@
+@font-face {
+  font-family: PlayfairDisplayM;
+  src: url("./assets/Fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: PlayFairDisplayB;
+  src: url("./assets/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("./assets/Fonts/Montserrat/Montserrat-light.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/Fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: iranSans;
+  src: url("./assets/Fonts/iranSans/iranSans/ttf/IRANSansWeb_Light.ttf");
+}
+@font-face {
+  font-family: BongCyperPonk;
+  src: url("./assets/Fonts/boge-font/Boge-MV3lY.otf");
+}
+@font-face {
+  font-family: bebas;
+  src: url("./assets/Fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("./assets/Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: openSans;
+  src: url("./assets/Fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: Dosis-semiBold;
+  src: url("./assets/Fonts/Dosis/static/Dosis-SemiBold.ttf");
+}
+@font-face {
+  font-family: Dosis-Medium;
+  src: url("./assets/Fonts/Dosis/static/Dosis-Medium.ttf");
+}
+body {
+  background: linear-gradient(to left, black, #212121);
+  scroll-behavior: smooth;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff1e00;
+  border-radius: 30px;
+}
+
+p {
+  cursor: default;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, span {
+  user-select: none;
+}
+
+.LoginAddClass {
+  opacity: 1;
+  z-index: 10;
+  transition-duration: 0.3s;
+}
+
+.LoginRemoveClass {
+  opacity: 0;
+  z-index: -10;
+  transition-duration: 0.3s;
+}
+
+.whole-music-genres {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+.whole-music-genres .genres-img {
+  position: absolute;
+  z-index: -50;
+  object-fit: cover;
+  object-position: center;
+  top: 30px;
+  opacity: 0.8;
+}
+
+.grid-header {
+  text-align: center;
+  margin: 55px 0 30px 0;
+  font-size: 70px;
+  letter-spacing: 2px;
+  font-family: Dosis-semiBold, sans-serif;
+  font-weight: 600;
+  color: #ff1e00;
+  cursor: default;
+}
+
+.grids {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.grid-system {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  justify-content: space-around;
+}
+
+.grid-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: transparent;
+  backdrop-filter: blur(4px) saturate(100%) contrast(50%) brightness(150%);
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  width: 200px;
+  height: 90px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+.grid-boxes:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: 0 1px 8px #f5f7fa, 0 -1px 8px #c3cfe2;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+.grid-boxes:hover .text-span {
+  color: #ff1e00;
+  cursor: pointer;
+  text-shadow: none;
+  font-weight: 600;
+}
+.grid-boxes:hover .boxes-texes {
+  text-overflow: clip;
+  display: flex;
+  justify-content: center;
+}
+
+.boxes-icon {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+  opacity: 0;
+}
+
+.boxes-texes {
+  padding: 0 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-span {
+  color: #212121;
+  font-size: 21px;
+  letter-spacing: 2px;
+  font-family: Dosis-Medium, sans-serif;
+  text-shadow: 0 1px 2px black;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 880px) {
+  .grid-boxes {
+    width: 175px;
+  }
+
+  .genres-img {
+    object-position: bottom;
+    top: 0;
+  }
+}
+
+/*# sourceMappingURL=music-genres.component.css.map */
