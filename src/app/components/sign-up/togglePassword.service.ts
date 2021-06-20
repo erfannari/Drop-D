@@ -9,7 +9,7 @@ export class TogglePasswordService {
   constructor() {
   }
 
-  togglePassword(): void {
+  togglePassword(): any {
     const input: any = document.getElementById('password');
 
     if (input.type === 'password') {
