@@ -46,8 +46,12 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.pageChangerService.OnChangeSignUpLogin();
   }
 
-  togglePassword(): any {
-    this.toggle.togglePassword();
+  togglePasswordSignUp(): any {
+    this.toggle.togglePasswordSignUp();
+  }
+
+  togglePasswordLogin(): any {
+    this.toggle.togglePasswordLogin();
   }
 
   // ******** POST DATA HTTP *********

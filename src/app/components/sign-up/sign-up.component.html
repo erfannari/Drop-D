@@ -28,7 +28,7 @@
             </label>
           </div>
           <div class="password-section form-group mt-4 mb-2">
-            <label for="password" class="labels">
+            <label for="password-signUp" class="labels">
               <span class="label-text">
                 Password
               </span>
@@ -36,7 +36,7 @@
                 type="password"
                 class="inputs"
                 placeholder="Enter your Password"
-                id="password"
+                id="password-signUp"
                 name="password"
                 required
                 ngModel
@@ -48,7 +48,7 @@
               <p>
                 Show Password
               </p>
-              <input type="checkbox" (click)="togglePassword()"/>
+              <input type="checkbox" (click)="togglePasswordSignUp()"/>
               <span class="check"></span>
             </label>
           </div>
@@ -117,7 +117,7 @@
             </label>
           </div>
           <div class="password-section form-group mt-4 mb-2">
-            <label for="password" class="labels">
+            <label for="password-login" class="labels">
               <span class="label-text">
                 Password
               </span>
@@ -146,7 +146,7 @@
               <p>
                 Show Password
               </p>
-              <input type="checkbox" (click)="togglePassword()"/>
+              <input type="checkbox" (click)="togglePasswordLogin()"/>
               <span class="check"></span>
             </label>
           </div>

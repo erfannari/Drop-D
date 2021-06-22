@@ -9,13 +9,20 @@ export class TogglePasswordService {
   constructor() {
   }
 
-  togglePassword(): any {
-    const input: any = document.getElementById('password');
-
-    if (input.type === 'password') {
-      input.type = 'text';
+  togglePasswordSignUp(): any {
+    const inputSignUP: any = document.getElementById('password-signUp');
+    if (inputSignUP.type === 'password') {
+      inputSignUP.type = 'text';
     } else {
-      input.type = 'password';
+      inputSignUP.type = 'password';
+    }
+  }
+  togglePasswordLogin(): any {
+    const inputLogin: any = document.getElementById('password-login');
+    if (inputLogin.type === 'password') {
+      inputLogin.type = 'text';
+    } else {
+      inputLogin.type = 'password';
     }
   }
 }
