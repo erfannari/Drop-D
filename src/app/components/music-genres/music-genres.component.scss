@@ -1,10 +1,9 @@
 @import '../../../../src/styles';
 
 .whole-music-genres {
-  margin-top: 40px;
+  margin-top: 25px;
   position: relative;
   display: flex;
-  height: 100vh;
 
   .genres-img {
     position: absolute;
@@ -69,6 +68,7 @@
       text-shadow: none;
       font-weight: 600;
     }
+
     .boxes-texes {
       text-overflow: clip;
       display: flex;

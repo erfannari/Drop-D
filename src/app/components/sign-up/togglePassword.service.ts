@@ -17,6 +17,11 @@ export class TogglePasswordService {
       inputSignUP.type = 'password';
     }
   }
+
+    // $('password-signUp').ready(function(){
+    //
+    //   })
+
   togglePasswordLogin(): any {
     const inputLogin: any = document.getElementById('password-login');
     if (inputLogin.type === 'password') {

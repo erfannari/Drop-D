@@ -88,10 +88,9 @@ h1, h2, h3, h4, h5, span {
 }
 
 .whole-music-genres {
-  margin-top: 40px;
+  margin-top: 25px;
   position: relative;
   display: flex;
-  height: 100vh;
 }
 .whole-music-genres .genres-img {
   position: absolute;

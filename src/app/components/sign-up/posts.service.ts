@@ -28,12 +28,12 @@ export class PostsService {
       .subscribe(responseData => {
         console.log(responseData);
       }, error => {
-        this.error.next(error.message);
-      });
+          this.error.next(error.message);
+        }
+      );
   }
 
   // ******** FETCH DATA HTTP *********
-
 
   fetchPosts(): any {
     let searchParams = new HttpParams();

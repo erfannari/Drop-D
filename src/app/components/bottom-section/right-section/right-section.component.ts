@@ -12,7 +12,7 @@ export class RightSectionComponent implements OnInit {
     {name: 'Nick Cave', image: '../../../../assets/images/nick-cave.jpg'},
     {name: 'John Lennon', image: '../../../../assets/images/John-Lennon.jpg'},
     {name: 'Willie Nelson', image: '../../../../assets/images/willie-nelson.jpg'},
-    {name: 'nick cave', image: '../../../../assets/images/15.jpg'}
+    {name: 'David Gilmour', image: '../../../../assets/images/david-gilmour.jpg'}
   ];
 
   constructor() {

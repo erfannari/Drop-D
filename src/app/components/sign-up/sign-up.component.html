@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row d-flex justify-content-center align-items-center mt-5">
+  <div class="row d-flex justify-content-center mt-5">
     <div class="background-sign-up container" id="background-sign-up">
       <div class="sign-up-isometric">
         <img src="../../../assets/isometrics/signUP.svg" alt="sign-up-isometric">
@@ -86,7 +86,7 @@
             </div>
           </div>
           <div class="error mb-0 mt-0" *ngIf="error">
-            <p> <strong>!Error: {{ error }}</strong></p>
+            <p><strong>!Error: {{ error }}</strong></p>
             <button class="btn btn-danger" (click)="handleError()">ok</button>
           </div>
         </div>
@@ -169,7 +169,7 @@
           <p>?New Member<br><a (click)="OnChangeSignUpLogin()">Create Account</a></p>
         </div>
       </div>
-      <div class="sign-up-isometric">
+      <div class="login-isometric">
         <img src="../../../assets/isometrics/blog-login.svg" alt="sign-up-isometric">
       </div>
     </div>

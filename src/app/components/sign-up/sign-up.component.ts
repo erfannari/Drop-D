@@ -31,7 +31,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
       this.error = errorMessage;
     });
 
-
     this.postsService.fetchPosts()
       .subscribe(posts => {
         this.loadedPosts = posts;
@@ -60,6 +59,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.postsService
       .createAndStorePost(postData.email, postData.password);
     console.log(postData);
+
   }
 
   // ******** FETCH DATA HTTP *********

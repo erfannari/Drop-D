@@ -15,16 +15,13 @@
 }
 
 .grid-system {
-  display: inline-block;
-  float: right;
-  margin: 10px 0;
-  width: 100%;
+  margin-right: 45px;
 }
 
 .grids {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: row-reverse;
   margin: 10px 0;
@@ -35,44 +32,8 @@
     .music-player {
       width: 100%;
       opacity: 1;
+      cursor: pointer;
     }
-
-    .text {
-      opacity: 1;
-    }
-  }
-}
-
-.music-player {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  background-color: #212121;
-  height: 150px;
-  width: 0;
-  opacity: 0;
-  transition: .3s ease-in-out all;
-}
-
-.text {
-  color: $WhiteFridge;
-  transition-duration: .3s;
-  opacity: 0;
-}
-
-.image-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-  border-radius: 5px;
-  transition-duration: .3s;
-  position: relative;
-  overflow-y: hidden;
-
-  &:hover {
-    cursor: pointer;
-    border-radius: 5px;
 
     .text-span {
       color: $sunSet;
@@ -87,11 +48,36 @@
   }
 }
 
+.music-player {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: #212121;
+  height: 185px;
+  width: 0;
+  opacity: 0;
+  transition: .3s ease-in-out all;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  transition-duration: .3s;
+  position: relative;
+  margin: 5px 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .images {
   transition-duration: .4s;
-  height: 150px;
 
   img {
+    height: 185px;
     border-radius: 0 5px 5px 0;
     object-fit: cover;
     object-position: top;
@@ -112,4 +98,51 @@
   text-shadow: 0 1px 2px black;
   opacity: 0;
   transition-duration: .4s;
+}
+
+@media screen and (max-width: 1054px) {
+  .grid-header span {
+    font-size: 45px;
+  }
+  .grid-system {
+    margin-right: 0;
+  }
+  .grids {
+    height: 135px;
+    margin: 30px 0;
+  }
+  .music-player {
+    opacity: 1;
+    width: 100%;
+  }
+  .image-box,
+  .images {
+    height: 135px;
+
+    img {
+      height: 135px;
+    }
+  }
+  .text-span {
+    font-size: 25px;
+    color: $WhiteFridge;
+    cursor: pointer;
+    box-shadow: none;
+    opacity: 1;
+  }
+  .images {
+    filter: brightness(.6);
+  }
+}
+
+@media screen and (max-width: 969px) {
+  .grid-header span {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 883px) {
+  .grid-header span {
+    font-size: 35px;
+  }
 }
